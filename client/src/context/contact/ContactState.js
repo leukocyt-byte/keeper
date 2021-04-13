@@ -5,8 +5,6 @@ import contactReducer from './contactReducer';
 import {
   ADD_CONTACT,
   DELETE_CONTACT,
-  SET_CONTACT,
-  CLEAR_CONTACT,
   UPDATE_CONTACT,
   FILTER_CONTACTS,
   CLEAR_FILTER,
@@ -40,6 +38,7 @@ const ContactState = (props) => {
       },
     ],
     current: null,
+    filtered: null
   };
   const [state, dispatch] = useReducer(contactReducer, initialState);
 
@@ -69,19 +68,30 @@ const ContactState = (props) => {
   };
 
   // Filter contacts
+  const filterContact = (text) => {
+    dispatch({ type: FILTER_CONTACTS, payload: text });
+  };
 
   // Clear filter
+  const clearFilter = () => {
+    dispatch({ type: CLEAR_FILTER });
+  };
+
+
 
   return (
     <contactContext.Provider
       value={{
         contacts: state.contacts,
         current: state.current,
+        filtered: state.filtered,
         addContact,
         deleteContact,
         setCurrent,
         clearCurrent,
-        updateContact
+        updateContact,
+        filterContact,
+        clearFilter
       }}
     >
       {props.children}
