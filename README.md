@@ -1,2 +1,3 @@
+![Contact keeper image](./public/keeper.png)
 # Contact keeper
-Fullstack application for contact storage // under development
+Fullstack application for contact storage
