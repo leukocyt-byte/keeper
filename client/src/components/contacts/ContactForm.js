@@ -40,7 +40,7 @@ const ContactForm = () => {
 
     }
     e.preventDefault();
-    contactContext.addContact(contact);
+ 
     setContact({
       name: '',
       email: '',
