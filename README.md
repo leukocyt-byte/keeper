@@ -14,8 +14,6 @@ $ npm client-install
 Include your MongoDB URI in /config/default.json file.
 ### Run server
 
-Include your MongoDB URI in /config/default.json file.
-
 ```
 $ npm run dev
 ```
