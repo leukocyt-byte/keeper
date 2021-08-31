@@ -18,9 +18,8 @@ const Login = (props) => {
       setAlert(error, 'danger');
       clearError();
     }
-
     // eslint-distable-next-line
-  }, [error, isAuthenticated, props.history]);
+  }, [error, isAuthenticated, props.history]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const [user, setUser] = useState({
     email: '',

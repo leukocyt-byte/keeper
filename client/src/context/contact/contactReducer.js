@@ -8,10 +8,10 @@ import {
   SET_CURRENT,
   CLEAR_CURRENT,
   CONTACT_ERROR,
-  CLEAR_CONTACTS
+  CLEAR_CONTACTS,
 } from '../types';
 
-export default (state, action) => {
+const contactReducer = (state, action) => {
   switch (action.type) {
     case GET_CONTACTS:
       return {
@@ -45,14 +45,14 @@ export default (state, action) => {
         ...state,
         current: null,
       };
-      case CLEAR_CONTACTS:
-        return {
-          ...state,
-          contacts: null,
-          current: null,
-          filtered: null,
-          error: null 
-        };
+    case CLEAR_CONTACTS:
+      return {
+        ...state,
+        contacts: null,
+        current: null,
+        filtered: null,
+        error: null,
+      };
 
     case UPDATE_CONTACT:
       return {
@@ -86,3 +86,5 @@ export default (state, action) => {
       return state;
   }
 };
+
+export default contactReducer;

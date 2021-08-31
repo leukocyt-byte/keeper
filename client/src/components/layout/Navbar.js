@@ -14,7 +14,7 @@ const Navbar = ({ title, icon }) => {
   const onLogout = () => {
     logout();
     clearContacts();
-  }
+  };
   const authLinks = (
     <Fragment>
       <li>Hello {user && user.name} </li>

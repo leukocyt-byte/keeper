@@ -36,11 +36,9 @@ const ContactForm = () => {
       addContact(contact);
     } else {
       updateContact(contact);
-
-
     }
     e.preventDefault();
- 
+
     setContact({
       name: '',
       email: '',
@@ -51,7 +49,7 @@ const ContactForm = () => {
 
   const clearAll = () => {
     clearCurrent();
-  }
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -105,7 +103,9 @@ const ContactForm = () => {
       </div>
       {current && (
         <div>
-          <button className='btn btn-light btn-block' onClick={clearAll}>Clear</button>
+          <button className="btn btn-light btn-block" onClick={clearAll}>
+            Clear
+          </button>
         </div>
       )}
     </form>

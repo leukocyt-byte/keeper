@@ -11,13 +11,13 @@ const ContactFilter = () => {
     if (filtered === null) {
       text.current.value = '';
     }
-  });
+  }); // eslint-disable-line react-hooks/exhaustive-deps
 
   const onChange = (e) => {
     if (text.current.value !== '') {
-      contactContext.filterContacts(e.target.value);
+      filterContacts(e.target.value);
     } else {
-      contactContext.clearFilter();
+      clearFilter();
     }
   };
   return (
