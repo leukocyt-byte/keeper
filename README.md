@@ -17,6 +17,3 @@ Include your MongoDB URI in /config/default.json file.
 ```
 $ npm run dev
 ```
-### Source
-
-Built during "Modern React Front To Back" course by [Brad Traversy](https://www.traversymedia.com/)
